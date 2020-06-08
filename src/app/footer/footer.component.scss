@@ -1,0 +1,70 @@
+.footer {
+  padding: 5% 0;
+  background-image: url("../../assets/ic_bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-footer {
+  list-style: none;
+  li {
+    padding-bottom: 15px;
+    padding-bottom: 15px;
+    a {
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #7c7c7c;
+      &:hover {
+        color: #7aa3b6;
+      }
+    }
+    cursor: pointer;
+  }
+}
+
+.bethkalan-email {
+  font-size: 16px;
+  color: #7aa3b6;
+  font-weight: 500;
+}
+
+.redes-sociais {
+  color: #7aa3b6;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu-footer {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .address {
+    text-align: center;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .beth-kalan-curiosity {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .footer {
+    background-image: none;
+    background-color: #f7f7f7;
+  }
+
+  .menu-footer {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .address {
+    text-align: center;
+  }
+}

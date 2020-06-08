@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>ic_Estetica</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_Estetica" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(21.000000, 21.000000)">
+            <path d="" id="Path-6" stroke="#979797"></path>
+            <path d="M5.22240818,34.4858155 L23.6181055,34.4858155 C30.9973232,25.1734756 30.0885441,17.3707616 20.8917681,11.0776736" id="Path-9" stroke="#79A2B5" stroke-width="2"></path>
+            <path d="M1.20792265e-13,34.4081419 L18.3956973,34.4081419 C25.774915,25.0958019 24.8661359,17.293088 15.66936,11" id="Path-9-Copy" stroke="#79A2B5" stroke-width="2" transform="translate(11.661631, 22.704071) scale(-1, 1) translate(-11.661631, -22.704071) "></path>
+            <rect id="Rectangle" stroke="#79A2B5" stroke-width="2" x="8" y="8" width="13" height="3"></rect>
+            <rect id="Rectangle" stroke="#79A2B5" stroke-width="2" x="12" y="1" width="4" height="5"></rect>
+            <rect id="Rectangle" fill="#79A2B5" x="9" y="2" width="2" height="3"></rect>
+            <line x1="14.5" y1="7.5" x2="14.5" y2="18.5" id="Line" stroke="#79A2B5" stroke-width="2" stroke-linecap="square"></line>
+            <path d="M3.52802095,18.9948522 C1.65361455,23.1965378 2.44716101,28.1095719 5.54904548,31.5074939 L6.05224982,32.0587231 L6.05224982,32.0587231 L14.8392209,32.0587231 L22.3890059,32.0587231 L23.0045249,31.3783466 C26.0446691,28.0178616 26.9700683,23.2484356 25.407262,18.9948522 L25.407262,18.9948522 L25.407262,18.9948522 L19.4811235,18.9948522 L3.52802095,18.9948522 Z" id="Path-10" fill="#79A2B5"></path>
+            <circle id="Oval" stroke="#79A2B5" stroke-width="2" cx="33.5" cy="25.5" r="3.5"></circle>
+            <path d="M16,3 C26.2417551,4.46817195 32.0750885,10.6348386 33.5,21.5" id="Path-8" stroke="#79A2B5" stroke-width="2"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="143px" height="143px" viewBox="0 0 143 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="55.5" cy="55.5" r="55.5"></circle>
+        <filter x="-25.2%" y="-18.0%" width="150.5%" height="150.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.466666667   0 0 0 0 0.494117647   0 0 0 0 0.6  0 0 0 0.20388986 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="beth_kalan-sobre" transform="translate(-190.000000, -754.000000)">
+            <g id="Group" transform="translate(206.000000, 762.000000)">
+                <g id="Group-2-Copy">
+                    <g id="Oval-Copy-3">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#79A2B5" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+                <g id="iconmonstr-id-card-24" transform="translate(32.000000, 30.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <path d="M6.88,4 L6.002,0 L41.99,0 L41.112,4 L6.88,4 Z M4,10 L3.122,6 L44.88,6 L44,10 L4,10 Z M24.198,31.432 L24.206,31.998 L12.328,31.998 L12.232,31.414 C11.966,29.856 11.878,28.966 13.396,28.554 C15.08,28.1 16.764,27.696 15.732,25.976 C12.478,20.884 14.034,17.996 17,17.996 C19.908,17.996 22.032,20.776 19.71,25.976 C19.014,27.684 20.71,28.088 22.512,28.554 C24.114,28.97 24.18,29.864 24.198,31.432 Z M37.454,22 L27.886,22 L27.83,24 L37.18,24 L37.454,22 Z M38,18 L28,18 L27.944,19.998 L37.728,19.998 L38,18 Z M36.904,26 L27.772,26 L27.714,27.998 L36.632,27.998 L36.904,26 Z M36.358,30 L27.656,30 L27.6,31.998 L36.082,31.998 L36.358,30 Z M48,36 L0,36 L4,48 L44,48 L48,36 Z M6.75,32 L4.58,15.998 L43.402,15.998 L41.164,32 L45.206,32 L48,12 L0,12 L2.712,32 L6.75,32 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,74 @@
+.vagas {
+  font-weight: 600;
+  font-size: 24px;
+  padding: 25px 0px;
+  color: #7aa3b6;
+}
+
+.job-position-history {
+  ul {
+    list-style: none;
+    display: inline-flex;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+    padding-bottom: 25px;
+    li {
+      cursor: pointer;
+      padding-right: 50px;
+      font-size: 18px;
+      color: #aaa;
+    }
+    .activated-link {
+      color: #7aa3b6;
+      font-size: 20px;
+    }
+  }
+}
+
+.btn-more-details {
+  border: 0px;
+  background: transparent;
+  vertical-align: sub;
+}
+
+.table-header {
+  padding-bottom: 25px;
+}
+
+.table-title {
+  color: #a4acbf;
+}
+
+.job-position-type {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.vagas-lista {
+  padding: 5px 0px;
+}
+
+.job-position {
+  padding: 25px 0px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+  border-radius: 8px;
+}
+
+.btn-job-action {
+  background-color: transparent;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  color: #aaa;
+  &:hover {
+    border: 2px solid #000;
+    border-radius: 20px;
+    color: #000;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .vagas-lista {
+    padding: 5px 40px;
+  }
+}

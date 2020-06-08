@@ -1,0 +1,32 @@
+<header>
+  <div class="welcome">
+    <div class="wrapper flex">
+      <div class="social-links">
+        <a href="//facebook.com/equipesdelojas" class="social-link">
+          <img src="../../assets/icons/facebook.svg" alt="">
+        </a>
+        <a href="//linkedin.com/equipesdelojas" class="social-link">
+          <img src="../../assets/icons/linkedin.svg" alt="">
+        </a>
+      </div>
+      <p>
+        <span *ngIf="mydate">{{mydate}} | </span><span class="btn-login" [routerLink]="['/login']">Faça login</span>
+      </p>
+    </div>
+  </div>
+  <div class="nav-container">
+    <div class="logotipo">
+      <h3 [routerLink]="['/']">
+        <img src="./../../assets/equipes-loja.png" alt="" *ngIf="showLogo">
+      </h3>
+    </div>
+    <div class="menu">
+      <ul>
+        <li *ngFor="let item of items" [routerLink]="item.url">
+            {{ item.label }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+

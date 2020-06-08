@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>ic_quiosque on</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_quiosque-on" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#FFFFFF" x="29" y="19" width="17" height="8" rx="2"></rect>
+        <path d="M52,48 C53.1045695,48 54,48.8954305 54,50 L54,56 C54,57.1045695 53.1045695,58 52,58 L23,58 C21.8954305,58 21,57.1045695 21,56 L21,50 C21,48.8954305 21.8954305,48 23,48 L52,48 Z M44,50 L31,50 L31,56 L44,56 L44,50 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="32" y="26" width="4" height="4"></rect>
+        <rect id="Rectangle-Copy" fill="#FFFFFF" x="39" y="26" width="4" height="4"></rect>
+        <polygon id="Path-5" fill="#FFFFFF" points="29.833474 29.6355982 26.212283 38 34 38 36 29.6355982"></polygon>
+        <polygon id="Path-5-Copy" fill="#FFFFFF" transform="translate(43.893859, 34.182201) scale(-1, 1) translate(-43.893859, -34.182201) " points="42.621191 30 39 38.3644018 46.787717 38.3644018 48.787717 30"></polygon>
+        <path d="M24.4023991,29.9797622 L19.7247546,36.942338 C19.4167664,37.400772 19.5387268,38.02208 19.9971608,38.3300682 C20.1620448,38.4408416 20.3561836,38.5 20.5548228,38.5 L54.2692551,38.5 C54.8215398,38.5 55.2692551,38.0522847 55.2692551,37.5 C55.2692551,37.3082157 55.214106,37.1204766 55.1103817,36.9591617 L50.6966215,30.0947599 C50.5126122,29.8085837 50.1957246,29.6355982 49.8554949,29.6355982 C45.61174,29.6355982 41.3679852,29.6355982 37.1242304,29.6355982 C32.9606928,29.6355982 28.9353623,29.6355982 25.048239,29.6355982 C24.7890755,29.6355982 24.5469247,29.7646388 24.4023991,29.9797622 Z" id="Path-4" stroke="#FFFFFF" stroke-width="2"></path>
+        <rect id="Rectangle" fill="#FFFFFF" x="24" y="39" width="3" height="10"></rect>
+        <rect id="Rectangle-Copy-2" fill="#FFFFFF" x="48" y="39" width="3" height="10"></rect>
+    </g>
+</svg>

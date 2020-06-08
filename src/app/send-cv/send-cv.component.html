@@ -1,0 +1,386 @@
+<div class="form">
+  <div class="app-container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 align-center">
+          <h3>Envie seu currículo em 3 passos</h3>
+        </div>
+        <div class="col-md-12">
+          <div class="row segmento-steps">
+            <div class="col-md-4 align-center">
+              <span class="step-number" [ngClass]="{ 'active-step-number': step >= 1 }">1</span> <span class="step-name" [ngClass]="{ 'active-step-name': step >= 1 }"> Escolha seu segmento</span>
+            </div>
+            <div class="col-md-4 align-center">
+              <span class="step-number" [ngClass]="{ 'active-step-number': step >= 2 }">2</span> <span class="step-name" [ngClass]="{ 'active-step-name': step >= 2 }">Sobre você</span>
+            </div>
+            <div class="col-md-4 align-center">
+              <span class="step-number" [ngClass]="{ 'active-step-number': step >= 3 }">3</span> <span class="step-name" [ngClass]="{ 'active-step-name': step >= 3 }">Enviar</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="row first-step segmentos" *ngIf="step === 1">
+            <div class="col-md-3 align-center">
+              <div
+                [ngClass]="{ 'selected-segmento-card': employeeData.segment === 'moda' }"
+                class="segmento-card"
+                (click)="changeEmployeeSegment('moda')">
+                <p>
+                  <img [hidden]="employeeData.segment === 'moda'" src="./../../assets/ic_moda.svg" alt="">
+                  <img [hidden]="employeeData.segment !== 'moda'" src="./../../assets/ic_moda on.svg" alt="">
+                </p>
+                Moda
+              </div>
+            </div>
+            <div class="col-md-3 align-center">
+              <div
+                [ngClass]="{ 'selected-segmento-card': employeeData.segment === 'cosméticos' }"
+                class="segmento-card"
+                (click)="changeEmployeeSegment('cosméticos')">
+                <p>
+                  <img [hidden]="employeeData.segment === 'cosméticos'" src="./../../assets/ic_Estetica.svg" alt="">
+                  <img [hidden]="employeeData.segment !== 'cosméticos'" src="./../../assets/ic_Estetica on.svg" alt="">
+                </p>
+                Cosméticos
+              </div>
+            </div>
+            <div class="col-md-3 align-center">
+              <div
+                [ngClass]="{ 'selected-segmento-card': employeeData.segment === 'livraria' }"
+                class="segmento-card"
+                (click)="changeEmployeeSegment('livraria')">
+                <p>
+                  <img [hidden]="employeeData.segment === 'livraria'" src="./../../assets/ic_quiosque.svg" alt="">
+                  <img [hidden]="employeeData.segment !== 'livraria'" src="./../../assets/ic_quiosque on.svg" alt="">
+                </p>
+                Livraria
+              </div>
+            </div>
+            <div class="col-md-3 align-center">
+              <div
+                [ngClass]="{ 'selected-segmento-card': employeeData.segment === 'alimentação' }"
+                class="segmento-card"
+                (click)="changeEmployeeSegment('alimentação')">
+                <p>
+                  <img [hidden]="employeeData.segment === 'alimentação'" src="./../../assets/ic_alimentacao.svg" alt="">
+                  <img [hidden]="employeeData.segment !== 'alimentação'" src="./../../assets/ic_alimentacao on.svg" alt="">
+                </p>
+                Alimentação
+              </div>
+            </div>
+            <div class="col-md-3 align-center">
+              <div
+                [ngClass]="{ 'selected-segmento-card': employeeData.segment === 'óticas' }"
+                class="segmento-card"
+                (click)="changeEmployeeSegment('óticas')">
+                <p>
+                  <img [hidden]="employeeData.segment === 'óticas'" src="./../../assets/ic_otica.svg" alt="">
+                  <img [hidden]="employeeData.segment !== 'óticas'" src="./../../assets/ic_otica on.svg" alt="">
+                </p>
+                Óticas
+              </div>
+            </div>
+            <div class="col-md-3 align-center">
+              <div
+                [ngClass]="{ 'selected-segmento-card': employeeData.segment === 'infantil' }"
+                class="segmento-card"
+                (click)="changeEmployeeSegment('infantil')">
+                <p>
+                  <img [hidden]="employeeData.segment === 'infantil'" src="./../../assets/ic_moda.svg" alt="">
+                  <img [hidden]="employeeData.segment !== 'infantil'" src="./../../assets/ic_moda on.svg" alt="">
+                </p>
+                Infantil
+              </div>
+            </div>
+            <div class="col-md-3 align-center">
+              <div
+                [ngClass]="{ 'selected-segmento-card': employeeData.segment === 'decoração' }"
+                class="segmento-card"
+                (click)="changeEmployeeSegment('decoração')">
+                <p>
+                  <img [hidden]="employeeData.segment === 'decoração'" src="./../../assets/ic_departamento.svg" alt="">
+                  <img [hidden]="employeeData.segment !== 'decoração'" src="./../../assets/ic_departamento on.svg" alt="">
+                </p>
+                Decoração
+              </div>
+            </div>
+            <div class="col-md-3 align-center">
+              <div
+                [ngClass]="{ 'selected-segmento-card': isOtherSegment }"
+                class="segmento-card" (click)="enableInputSegment()">
+                <p>
+                  <img [hidden]="isOtherSegment" src="./../../assets/ic_outros.svg" alt="">
+                  <img [hidden]="!isOtherSegment" src="./../../assets/ic_outros on.svg" alt="">
+                </p>
+                outros
+              </div>
+            </div>
+            <div class="col-md-12 form-group" *ngIf="isOtherSegment">
+              <input type="text" class="form-control" id="outroSegmento" placeholder="Digite aqui seu segmento" [(ngModel)]="employeeData.segment">
+            </div>
+          </div>
+
+          <div class="row second-step" *ngIf="step === 2">
+            <div class="col-md-6 input-container form-group">
+              <label for="nomeCompletoFuncionario">Nome completo*</label>
+              <input
+                class="form-control"
+                id="nomeCompletoFuncionario"
+                type="text"
+                placeholder="Nome Sobrenome"
+                [(ngModel)]="employeeData.name">
+            </div>
+            <div class="col-md-6 input-container form-group">
+              <label for="cpfFuncionario">CPF*</label>
+              <input
+                class="form-control"
+                id="cpfFuncionario"
+                type="text"
+                placeholder="000.000.000-00"
+                [(ngModel)]="employeeData.cpf">
+            </div>
+            <div class="col-md-6 input-container form-group">
+              <label for="cidadeFuncionario">Cidade*</label>
+              <input
+                class="form-control"
+                id="cidadeFuncionario"
+                type="text"
+                placeholder="Nome da cidade"
+                [(ngModel)]="employeeData.city">
+            </div>
+            <div class="col-md-6 input-container form-group">
+              <label for="estadoFuncionario">Estado*</label>
+              <select class="form-control select-form" id="estadoFuncionario" (change)="selectState($event)">
+                <option></option>
+                <option value="AC">AC</option>
+                <option value="AL">AL</option>
+                <option value="AP">AP</option>
+                <option value="AM">AM</option>
+                <option value="BA">BA</option>
+                <option value="CE">CE</option>
+                <option value="DF">DF</option>
+                <option value="ES">ES</option>
+                <option value="GO">GO</option>
+                <option value="MA">MA</option>
+                <option value="MT">MT</option>
+                <option value="MS">MS</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+                <option value="PB">PB</option>
+                <option value="PR">PR</option>
+                <option value="PE">PE</option>
+                <option value="PI">PI</option>
+                <option value="RJ">RJ</option>
+                <option value="RN">RN</option>
+                <option value="RS">RS</option>
+                <option value="RO">RO</option>
+                <option value="RR">RR</option>
+                <option value="SC">SC</option>
+                <option value="SP">SP</option>
+                <option value="SE">SE</option>
+                <option value="TO">TO</option>
+              </select>
+              <!-- <input
+                class="form-control"
+                id="estadoFuncionario"
+                type="text"
+                placeholder="Nome do estado"
+                [(ngModel)]="employeeData.state"> -->
+            </div>
+            <div class="col-md-12 form-group">
+              <label for="jobLevel">Cargo*</label>
+              <select class="form-control select-form" id="jobTime" (change)="selectJobPosition($event)">
+                <option></option>
+                <option value="Supervisor de loja própria - até 3 lojas">Supervisor de loja própria - até 3 lojas</option>
+                <option value="Supervisor de loja própria - até 5 lojas">Supervisor de loja própria - até 5 lojas</option>
+                <option value="Supervisor de loja própria - até 7 lojas">Supervisor de loja própria - até 7 lojas</option>
+                <option value="Supervisor de loja própria - acima 10 lojas">Supervisor de loja própria - acima 10 lojas</option>
+                <option value="Supervisor de franquia - até 3 lojas">Supervisor de franquia - até 3 lojas</option>
+                <option value="Supervisor de franquia - até 5 lojas">Supervisor de franquia - até 5 lojas</option>
+                <option value="Supervisor de franquia - até 7 lojas">Supervisor de franquia - até 7 lojas</option>
+                <option value="Supervisor de franquia - acima 10 lojas">Supervisor de franquia - acima 10 lojas</option>
+                <option value="Consultora de franquia - até 3 lojas">Consultora de franquia - até 3 lojas</option>
+                <option value="Consultora de franquia - até 5 lojas">Consultora de franquia - até 5 lojas</option>
+                <option value="Consultora de franquia - até 7 lojas">Consultora de franquia - até 7 lojas</option>
+                <option value="Consultora de franquia - acima 10 lojas">Consultora de franquia - acima 10 lojas</option>
+                <option value="Gerente de lojas - Junior">Gerente de lojas - Junior</option>
+                <option value="Gerente de lojas - Pleno">Gerente de lojas - Pleno</option>
+                <option value="Gerente de lojas - Senior">Gerente de lojas - Senior</option>
+                <option value="Assistente de gerente de lojas">Assistente de gerente de lojas</option>
+                <option value="Coordenador de loja">Coordenador de loja</option>
+                <option value="Subgerente">Subgerente</option>
+                <option value="Vendedor responsável">Vendedor responsável</option>
+                <option value="Vendedor - Junior">Vendedor - Junior</option>
+                <option value="Vendedor - Pleno">Vendedor - Pleno</option>
+                <option value="Vendedor - Senior">Vendedor - Senior</option>
+                <option value="Assistente de vendas">Assistente de vendas</option>
+                <option value="Caixa">Caixa</option>
+                <option value="Caixa administrativo">Caixa administrativo</option>
+                <option value="Estoquistas">Estoquistas</option>
+                <option value="Auxiliar de loja">Auxiliar de loja</option>
+                <option value="Empacotador de presentes">Empacotador de presentes</option>
+                <option value="Demonstradora de produtos">Demonstradora de produtos</option>
+                <option value="Vitrinista">Vitrinista</option>
+                <option value="Visual Merchandising - Junior">Visual Merchandising - Junior</option>
+                <option value="Visual Merchandising - Pleno">Visual Merchandising - Pleno</option>
+                <option value="Visual Merchandising - Senior">Visual Merchandising - Senior</option>
+                <option value="Assistente Visual Merchandising">Assistente Visual Merchandising</option>
+                <option value="Recepcionista de loja">Recepcionista de loja</option>
+                <option value="Maquiadores">Maquiadores</option>
+                <option value="Cabeleireiro - Junior">Cabeleireiro - Junior</option>
+                <option value="Cabeleireiro - Pleno">Cabeleireiro - Pleno</option>
+                <option value="Cabeleireiro - Senior">Cabeleireiro - Senior</option>
+                <option value="Assistente de cabeleireiro">Assistente de cabeleireiro</option>
+                <option value="Manicures">Manicures</option>
+                <option value="Podólogos">Podólogos</option>
+              </select>
+            </div>
+            <div class="col-md-6 input-container form-group">
+              <label for="salarioMinimoFuncionario">Salário mínimo*</label>
+              <select class="form-control select-form" id="salarioMinimoFuncionario" (change)="selectSalaryMin($event)">
+                <option></option>
+                <option value="Até R$1000">Até R$1000</option>
+                <option value="De R$1000 a R$2000">De R$1000 a R$2000</option>
+                <option value="De R$2000 a R$3000">De R$2000 a R$3000</option>
+                <option value="De R$3000 a R$4000">De R$3000 a R$4000</option>
+                <option value="De R$3000 a R$4000">De R$3000 a R$4000</option>
+                <option value="De R$4000 a R$5000">De R$4000 a R$5000</option>
+                <option value="De R$5000 a R$6000">De R$5000 a R$6000</option>
+                <option value="De R$6000 a R$7000">De R$6000 a R$7000</option>
+                <option value="De R$7000 a R$8000">De R$7000 a R$8000</option>
+                <option value="De R$8000 a R$9000">De R$8000 a R$9000</option>
+                <option value="De R$10000 a R$12000">De R$10000 a R$12000</option>
+                <option value="De R$12000 a R$14000">De R$12000 a R$14000</option>
+                <option value="De R$14000 a R$16000">De R$14000 a R$16000</option>
+                <option value="De R$16000 a R$18000">De R$16000 a R$18000</option>
+                <option value="De R$18000 a R$20000">De R$18000 a R$20000</option>
+                <option value="De R$20000 para cima">De R$20000 para cima</option>
+              </select>
+            </div>
+            <div class="col-md-6 input-container form-group">
+              <label for="salarioIdealFuncionario">Salário ideal*</label>
+                <select class="form-control select-form" id="salarioIdealFuncionario" (change)="selectSalaryIdeal($event)">
+                  <option></option>
+                  <option value="Até R$1000">Até R$1000</option>
+                  <option value="De R$1000 a R$2000">De R$1000 a R$2000</option>
+                  <option value="De R$2000 a R$3000">De R$2000 a R$3000</option>
+                  <option value="De R$3000 a R$4000">De R$3000 a R$4000</option>
+                  <option value="De R$3000 a R$4000">De R$3000 a R$4000</option>
+                  <option value="De R$4000 a R$5000">De R$4000 a R$5000</option>
+                  <option value="De R$5000 a R$6000">De R$5000 a R$6000</option>
+                  <option value="De R$6000 a R$7000">De R$6000 a R$7000</option>
+                  <option value="De R$7000 a R$8000">De R$7000 a R$8000</option>
+                  <option value="De R$8000 a R$9000">De R$8000 a R$9000</option>
+                  <option value="De R$10000 a R$12000">De R$10000 a R$12000</option>
+                  <option value="De R$12000 a R$14000">De R$12000 a R$14000</option>
+                  <option value="De R$14000 a R$16000">De R$14000 a R$16000</option>
+                  <option value="De R$16000 a R$18000">De R$16000 a R$18000</option>
+                  <option value="De R$18000 a R$20000">De R$18000 a R$20000</option>
+                  <option value="De R$20000 para cima">De R$20000 para cima</option>
+                </select>
+            </div>
+            <div class="col-md-6 input-container form-group">
+              <label for="salarioIdealFuncionario">E-mail*</label>
+              <input
+                class="form-control"
+                id="salarioIdealFuncionario"
+                type="email"
+                placeholder="seuemail@contato.com"
+                [(ngModel)]="employeeData.email">
+            </div>
+            <div class="col-md-6 input-container form-group">
+              <label for="celularFuncionario">Celular*</label>
+              <input
+                class="form-control"
+                id="celularFuncionario"
+                type="text"
+                placeholder="5511999999999"
+                [(ngModel)]="employeeData.cellPhone">
+            </div>
+          </div>
+
+          <div class="row third-step" *ngIf="step === 3">
+            <div class="col-md-6 form-group">
+              <p>Preferência:</p>
+              <div class="row">
+                <div class="col-md-4">
+                  <mat-checkbox [(ngModel)]="isStreetStore" (change)="changeEmployeePreference('Loja de rua')">Loja de rua</mat-checkbox>
+                </div>
+                <div class="col-md-4">
+                  <mat-checkbox [(ngModel)]="isShowRoom" (change)="changeEmployeePreference('Show room')">Show room</mat-checkbox>
+                </div>
+                <div class="col-md-4">
+                  <mat-checkbox [(ngModel)]="isShopping" (change)="changeEmployeePreference('Shopping')">Shopping</mat-checkbox>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 input-container form-group" *ngIf="isShopping">
+              <label for="primeiroShoppingFuncionario">1º Shopping de preferência*</label>
+              <input
+                class="form-control"
+                id="primeiroShoppingFuncionario"
+                type="text"
+                placeholder="Nome do shopping"
+                [(ngModel)]="employeeData.firstShopping">
+            </div>
+            <div class="col-md-12 input-container form-group" *ngIf="isShopping">
+              <label for="segundoShoppingFuncionario">2º Shopping de preferência</label>
+              <input
+                class="form-control"
+                id="segundoShoppingFuncionario"
+                type="text"
+                placeholder="Nome do shopping"
+                [(ngModel)]="employeeData.secondShopping">
+            </div>
+            <div class="col-md-12 input-container form-group" *ngIf="isShopping">
+              <label for="terceiroShoppingFuncionario">3º Shopping de preferência</label>
+              <input
+                class="form-control"
+                id="terceiroShoppingFuncionario"
+                type="text"
+                placeholder="Nome do shopping"
+                [(ngModel)]="employeeData.thirdShopping">
+            </div>
+            <div class="col-md-12" [hidden]="files.size > 0">
+              <div class="row upload-container align-items-center" style="cursor: pointer" (click)="addFiles()">
+                <div class="col-md-3 align-center">
+                  <img src="./../../assets/ic_upload_gray.svg" alt="">
+                </div>
+                <div class="col-md-9">
+                  <p style="color:#7c7c7c; margin: 0px">
+                    Carregue aqui seu currículo (pdf ou docx)
+                  </p>
+                  <input type="file" accept=".pdf,.docx,.doc" #file style="display: none" (change)="onFilesAdded()" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12" [hidden]="files.size == 0">
+              <div class="row file-details align-items-center" *ngFor="let file of files">
+                <div class="col-md-2">
+                  <img src="../../assets/ic_folder.svg" alt="">
+                </div>
+                <div class="col-md-8">
+                  {{ file.name }}
+                </div>
+                <div class="col-md-2 remove-file align-center" (click)="removeFile(file)">
+                  <img src="../../assets/ic_delete.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="padding-top: 50px;" *ngIf="step < 4">
+            <div class="col-md-12 align-center">
+              <button class="btn-send-form" (click)="nextStep()">{{ step !== 3 ? 'Próximo passo' : 'Enviar' }}</button>
+            </div>
+          </div>
+          <div class="row success-text" *ngIf="step === 4">
+            <div class="col-md-12 align-center">
+              <h3>Currículo enviado com sucesso!</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

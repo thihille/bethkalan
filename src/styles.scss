@@ -1,0 +1,98 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #fff; }
+
+:focus {
+  outline: none;
+}
+.wrapper-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.full-width {
+  max-width: 100%;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  font-size: 18px;
+  color: #7c7c7c;
+}
+
+button:focus {
+  outline: none;
+}
+
+.app-container {
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 100%;
+  padding: 0px 200px;
+}
+
+.app-notification-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.app-notification-error {
+  background-color: #dc3545;
+  color: white;
+}
+
+.app-notification-warning {
+  background-color: #ffc107;
+  color: white;
+}
+
+@media only screen and (max-width: 1260px) {
+  .app-container {
+    padding: 0px 100px;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  .is-mobile {
+    display: none;
+  }
+
+  .is-desktop {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .is-desktop {
+    display: none;
+  }
+
+  .is-mobile {
+    display: block;
+  }
+
+  .app-container {
+    padding: 0px 0px;
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

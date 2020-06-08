@@ -1,0 +1,272 @@
+.img-full {
+  img {
+    width: -webkit-fill-available;
+  }
+}
+
+.carousel {
+
+  .item {
+    position: relative;
+
+    .description {
+      position: absolute;
+      bottom: 10px;
+      right: -20px;
+
+      p {
+        display: block;
+        margin: 3px;
+        padding: 10px 80px 10px 10px;
+        font-family: 'poppinslight';
+        color: rgba(255,255,255,.9);
+        background-color: black;
+        opacity: 0;
+      }
+
+      .first-line {
+        font-size: 1em;
+        animation: anDescription 2s ease both;
+      }
+      .second-line {
+        font-size: 1.28em;
+        animation: anDescription 2s ease .3s both;
+      }
+
+    }
+  }
+}
+
+@keyframes anDescription {
+  0% {
+    opacity: 0;
+    transform: translate(100px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.description {
+  p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.description-details {
+  padding: 100px 0%;
+}
+
+.values {
+  padding: 100px 0%;
+}
+
+.btn-customer-type-selected {
+  background-color: #7aa3b6;
+  border: 1px solid #7aa3b6;
+  color: white;
+  font-weight: 500;
+  padding: 5px 25px;
+  border-radius: 15px;
+  margin: 0px 15px;
+  font-size: 20px;
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #7aa3b6;
+    color:#7aa3b6;
+  }
+}
+
+.btn-customer-type-not-selected {
+  background-color: #fff;
+  border: 1px solid #7aa3b6;
+  color:#7aa3b6;
+  font-weight: 500;
+  padding: 5px 25px;
+  border-radius: 15px;
+  margin: 0px 15px;
+  font-size: 20px;
+  &:hover {
+    background-color: #7aa3b6;
+    border: 1px solid #7aa3b6;
+    color: white;
+  }
+}
+
+.help-question {
+  padding-bottom: 50px;
+}
+
+.hero {
+  h2 {
+    color: #7aa3b6;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  p {
+    color: #7aa3b6;
+    font-size: 20px;
+  }
+}
+
+.beth-kalan-curiosity {
+  text-align: left;
+  p {
+    color: #7c7c7c;
+  }
+}
+
+.input-container {
+  input {
+    width: 100%;
+  }
+}
+
+.form {
+  // background-color: #f6f6f6;
+  background: no-repeat url('./../../assets/bg_sobre.png');
+  background-size: cover;
+  min-height: 861px;
+  padding: 50px 0px;
+  h3 {
+    padding-bottom: 25px;
+  }
+  input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: auto;
+  }
+  label {
+    color: #7c7c7c;
+    font-weight: 500;
+  }
+}
+
+.btn-send-form {
+  background-color: #7aa3b6;
+  border: 1px solid #7aa3b6;
+  color: white;
+  font-weight: 500;
+  padding: 5px 25px;
+  border-radius: 30px;
+  margin: 0px 15px;
+  font-size: 20px;
+  &:hover {
+    background-color: #fff;
+    border: 1px solid #7aa3b6;
+    color:#7aa3b6;
+  }
+}
+
+.step-number {
+  font-size: 20px;
+  background-color: #aaabab;
+  color: #fff;
+  padding: 5px 11px;
+  border-radius: 600px;
+  margin-right: 10px;
+}
+
+.active-step-number {
+  background-color: #7aa3b6;
+}
+
+.step-name {
+  color: #7c7c7c;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.active-step-name {
+  color: #7aa3b6;
+}
+
+.segmento-card {
+  width: 70%;
+  background-color: white;
+  border-radius: 6px;
+  text-align: center;
+  padding: 20px 10px;
+  margin: 10px auto;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  cursor: pointer;
+  p {
+    margin: 0px;
+  }
+}
+
+.select-form {
+  padding: 15px 15px;
+  height: auto;
+}
+
+.selected-segmento-card {
+  background-color: #7aa3b6;
+  color: #fff;
+}
+
+.segmentos {
+  .col-md-3 {
+    padding: 0px;
+  }
+
+  input {
+    width: 90%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+.segmento-steps {
+  margin-bottom: 25px;
+}
+
+.success-text {
+  padding: 50px 0px;
+}
+
+.upload-container {
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+  background-color: #fff;
+  border-radius: 4px;
+  margin-top: 15px;
+}
+
+.file-details {
+  background-color: #fff;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+  padding: 25px 15px;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #7aa3b6;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .beth-kalan-curiosity {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .beth-kalan-curiosity {
+    text-align: center;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .segmento-steps .col-md-4 {
+    text-align: center;
+    padding-top: 15px;
+  }
+}

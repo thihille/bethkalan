@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="63px" height="63px" viewBox="0 0 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>ic_upload_gray</title>
+    <desc>Created with Sketch.</desc>
+    <g id="ic_upload_gray" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iconmonstr-inbox-6" transform="translate(5.000000, 9.000000)" fill="#ADADAD" fill-rule="nonzero">
+            <path d="M53,19.9688889 L53,40 L0,40 L0,19.9688889 L12.0950417,0 L17.21175,0 L5.15425,20 L15.4583333,20 L20.4270833,26.6666667 L32.5729167,26.6666667 L37.5416667,20 L47.852375,20 L35.7794167,0 L40.95575,0 L53,19.9688889 Z M30.9166667,11.1111111 L37.5416667,11.1111111 L26.5,0 L15.4583333,11.1111111 L22.0833333,11.1111111 L22.0833333,22.2222222 L30.9166667,22.2222222 L30.9166667,11.1111111 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

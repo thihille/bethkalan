@@ -1,0 +1,127 @@
+<app-header [showLogo]="true"></app-header>
+<div class="app-container" *ngIf="jobDetails !== null && jobDetails.status === 'Aberta'">
+  <div class="container-fluid">
+    <div class="row description">
+      <div class="col-md-12" style="padding: 15px 0px;">
+        <h1 style="text-transform: uppercase; font-size: 25px">{{ jobDetails.jobTitle ? jobDetails.jobTitle : 'VAGA'  }}
+        </h1>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.companyDescription">
+        <p><b>Descrição da empresa:</b> {{ jobDetails.companyDescription ? jobDetails.companyDescription : '-' }}</p>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.jobPosition">
+        <p><b>Cargo:</b> {{ jobDetails.jobPosition ? jobDetails.jobPosition : '-' }}</p>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.place || jobDetails.city">
+        <p>
+          <span *ngIf="jobDetails.city"><b>Cidade:</b> {{ jobDetails.city ? jobDetails.city : ''  }}</span>
+          <span *ngIf="jobDetails.city  && jobDetails.place">, </span>
+          <span *ngIf="jobDetails.place"><b>Local de trabalho:</b> {{ jobDetails.place ? jobDetails.place : '-' }}</span>
+        </p>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.time || (jobDetails.availability && jobDetails.availability.length > 0)">
+        <p>
+          <span *ngIf="jobDetails.time">
+            <b>Horário de trabalho:</b> {{ jobDetails.time ? jobDetails.time : '-' }}
+          </span>
+          <span *ngIf="jobDetails.time && jobDetails.availability">, </span>
+          <span *ngIf="jobDetails.availability && jobDetails.availability.length > 0">
+            <b>Carga horária:</b> {{ jobDetails.availability ? jobDetails.availability.join(', ') : '-' }}
+          </span>
+        </p>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.jobFunction">
+        <p><b>Função:</b> {{ jobDetails.jobFunction ? jobDetails.jobFunction : '-' }}</p>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.experience">
+        <p><b>Experiência desejada:</b> {{ jobDetails.experience ? jobDetails.experience : '-' }}</p>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.scholarity || jobDetails.language">
+        <p>
+          <span *ngIf="jobDetails.scholarity"><b>Escolaridade:</b> {{ jobDetails.scholarity ? jobDetails.scholarity : '-' }}</span>
+          <span *ngIf="jobDetails.scholarity && jobDetails.language">, </span>
+          <span *ngIf="jobDetails.language"><b>Idiomas:</b> {{ jobDetails.language ? jobDetails.language : '-' }}</span>
+        </p>
+
+      </div>
+      <div class="col-md-12 job-description">
+        <p *ngIf="jobDetails.fixedSalary">
+          <span><b>Salário Fixo:</b> {{ jobDetails.fixedSalary }}</span>
+        </p>
+        <p *ngIf="jobDetails.comission">
+          <span><b>Comissão:</b> {{ jobDetails.comission }}</span>
+          <span *ngIf="jobDetails.comissionValue">, <b>Valor:</b> {{ jobDetails.comissionValue }}</span>
+        </p>
+        <p *ngIf="jobDetails.bonus">
+          <span><b>Variável:</b> {{ jobDetails.bonus }}</span>
+        </p>
+        <p *ngIf="jobDetails.monthlyMean">
+          <span><b>Média mensal:</b> {{ jobDetails.monthlyMean }}</span>
+        </p>
+      </div>
+      <div
+        class="col-md-12 job-description"
+        *ngIf="jobDetails.vr || jobDetails.vrValue || jobDetails.va || jobDetails.vaValue || jobDetails.vt || jobDetails.costHelp || jobDetails.medicalAssistence || jobDetails.odonto">
+        <br>
+        <p><b>Benefícios</b></p>
+        <p>
+          <span *ngIf="jobDetails.vr"><b>Vale Refeição:</b> {{ jobDetails.vr }}</span>
+          <span *ngIf="jobDetails.vrValue">, <b>Valor:</b> {{ jobDetails.vrValue }}</span>
+          <span *ngIf="jobDetails.va">, <b>Vale Alimentação:</b> {{ jobDetails.va }}</span>
+          <span *ngIf="jobDetails.vaValue">, <b>Valor:</b> {{ jobDetails.vaValue }}</span>
+        </p>
+        <p>
+          <span *ngIf="jobDetails.vt"><b>Vale Transporte:</b> {{ jobDetails.vt }}</span>
+          <span *ngIf="jobDetails.vt && jobDetails.costHelp">, </span>
+          <span *ngIf="jobDetails.costHelp"><b>Ajuda de custo:</b> {{ jobDetails.costHelp }}</span>
+        </p>
+        <p>
+          <span *ngIf="jobDetails.medicalAssistence"><b>Assistência médica:</b> {{ jobDetails.medicalAssistence }}</span>
+          <span *ngIf="jobDetails.medicalAssistence && jobDetails.odonto">, </span>
+          <span *ngIf="jobDetails.odonto"><b>Odonto:</b> {{ jobDetails.odonto }}</span>
+          <span *ngIf="jobDetails.odonto && jobDetails.seguro">, </span>
+        </p>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.outros">
+        <p>
+          <span *ngIf="jobDetails.outros"><b>Outros:</b> {{ jobDetails.outros }}</span>
+        </p>
+      </div>
+      <div class="col-md-12 job-description" *ngIf="jobDetails.contract && jobDetails.contract.length > 0">
+        <br>
+        <p><b>Tipo contrato:</b> {{ jobDetails.contract ? jobDetails.contract.join(', ') : '-' }}</p>
+      </div>
+      <div class="col-md-12 align-center" *ngIf="!isApplyJobEnable" style="padding-bottom: 25px;">
+        <button class="btn-apply" (click)="applyToJob()">CANDIDATAR</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="padding-top: 25px" *ngIf="isApplyJobEnable && jobDetails !== null && jobDetails.status === 'Aberta'">
+  <app-send-cv></app-send-cv>
+</div>
+
+
+<div class="app-container" *ngIf="!jobId">
+  <div class="container-fluid">
+    <div class="row description">
+      <div class="col-md-12">
+        Vaga não encontrada
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="app-container" *ngIf="jobDetails !== null && jobDetails.status !== 'Aberta'">
+  <div class="container-fluid">
+    <div class="row description">
+      <div class="col-md-12 align-center">
+        <h3>Essa vaga já foi encerrada! Agradecemos pela compreensão.</h3>
+        <p style="padding-top: 10px">
+          <button class="btn-apply" (click)="goToHomePage()">Ir para o site Equipes de Lojas</button>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

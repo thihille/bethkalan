@@ -1,0 +1,71 @@
+.app-container {
+  max-width: 100%;
+  padding: 0px 100px;
+  // background-image: url('./../../assets/bg_sobre.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.section-title {
+  padding-top: 25px;
+  h5 {
+    font-weight: 600;
+    font-size: 24px;
+    padding: 25px 0px;
+    color: #7aa3b6;
+  }
+  h4 {
+    font-weight: 600;
+    font-size: 30px;
+    padding: 25px 0px;
+    color: #7aa3b6;
+  }
+}
+
+.city-list {
+  ul {
+    list-style: none;
+    li {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.about-beth {
+  p {
+    color: #4d4d4d;
+    font-size: 20px;
+  }
+}
+
+.short-description {
+  p {
+    color: #4d4d4d;
+    font-size: 20px;
+  }
+}
+
+.more-about-beth {
+  p {
+    color: #4d4d4d;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .short-description {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .city-list {
+    text-align: center;
+    ul {
+      padding-left: 0px;
+    }
+  }
+
+  .app-container {
+    padding: 0px 0px;
+  }
+}

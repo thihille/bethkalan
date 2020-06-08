@@ -1,0 +1,45 @@
+<div class="footer full-width">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-1"></div>
+
+      <div class="col-md-4 align-center">
+        <a href="http://bethkalan.com.br">
+          <img src="./../../assets/logo.png" alt="">
+        </a>
+      </div>
+
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="menu-footer">
+              <li>
+                <a [routerLink]="['/about']">Sobre nós</a>
+              </li>
+              <li>
+                <a [routerLink]="['/company']">Sou empresa</a>
+              </li>
+              <li>
+                <a [routerLink]="['/cv']">Sou candidato</a>
+              </li>
+              <li>
+                <a href="http://sitebethkalan.s3-website-sa-east-1.amazonaws.com/">Beth Kalan</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-8 address">
+            <h6>Contato</h6>
+            <p>Avenida Paulista 2202, 6º andar - Bela Vista - São Paulo</p>
+            <!-- <p class="bethkalan-email">contato@bethkalan.com.br</p> -->
+            <p class="redes-sociais" (click)="openFacebookLink()">
+              <img src="./../../assets/ic_fb.svg" alt=""> Facebook
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</div>
