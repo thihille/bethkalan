@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="279px" viewBox="0 0 1440 279" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="-2.48949813e-15%" x2="50%" y2="38.1582256%" id="linearGradient-1">
+            <stop stop-color="#A0BFCC" offset="0%"></stop>
+            <stop stop-color="#A0BFCC" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-6.73332328%" y1="108.056193%" x2="92.3330473%" y2="69.1657179%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#EBEBEB" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="beth_kalan" transform="translate(0.000000, -3175.000000)">
+            <g id="bg" transform="translate(-231.000000, 3172.000000)">
+                <path d="M1208,0 L1783.26779,0 C1901.05849,107.440314 1931.2067,226.464591 1873.71241,357.07283 C1787.47098,552.985189 1654.41949,384.615079 1568.28057,583.676173 C1510.85462,716.38357 1390.7611,736.509914 1208,644.055207 L1208,0 Z" id="wave" fill="#A0BFCC" transform="translate(1555.000000, 350.500000) scale(-1, -1) translate(-1555.000000, -350.500000) "></path>
+                <path d="M356.932117,186.804912 C411.320439,149.92499 596.157644,254.147283 607.531294,282.863995 C613.265799,297.342735 617.348803,338.307607 604.573973,380.35449 C589.328866,430.532004 555.199071,457.176886 525.388263,460.285722 C470.59711,465.999645 341.869353,437.037087 302.051102,387.567695 C262.232851,338.098304 302.543795,223.684835 356.932117,186.804912 Z" id="Rectangle-3" fill="url(#linearGradient-1)" transform="translate(449.500000, 320.000000) scale(-1, -1) translate(-449.500000, -320.000000) "></path>
+                <path d="M126.46307,172.700112 C223.430629,107.964078 552.97219,290.907465 573.249983,341.31446 C583.473886,366.729269 590.753371,438.635694 567.97745,512.441392 C540.797336,600.518943 479.948191,647.289215 426.799257,652.746213 C329.113502,662.775973 99.6080509,611.937439 28.6171022,525.102869 C-42.3738465,438.268299 29.4955116,237.436147 126.46307,172.700112 Z" id="Rectangle-3" fill="url(#linearGradient-2)" transform="translate(291.500000, 406.500000) scale(-1, -1) translate(-291.500000, -406.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
