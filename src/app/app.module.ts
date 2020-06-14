@@ -19,6 +19,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { JobDescriptionComponent } from './job-description/job-description.component';
 import { SendCvComponent } from './send-cv/send-cv.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { LoginComponent } from './login/login.component';
+import { LogoBarsComponent } from './logo-bars/logo-bars.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { JobsComponent } from './jobs/jobs.component';
     JobDescriptionComponent,
     SendCvComponent,
     JobsComponent,
+    LoginComponent,
+    LogoBarsComponent,
   ],
   imports: [
     BrowserModule,

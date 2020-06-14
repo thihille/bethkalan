@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  equipesDeLojaApi: 'http://localhost:3000/'
-  // equipesDeLojaApi: 'ec2-35-171-26-132.compute-1.amazonaws.com:3000/'
+  // equipesDeLojaApi: 'http://localhost:3000/'
+  equipesDeLojaApi: 'http://api.equipesdelojas.com.br/'
 };
 
 /*

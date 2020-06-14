@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { JobDescriptionComponent } from './job-description/job-description.component';
 import { JobsComponent } from './jobs/jobs.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: 'sobre-nos', component: AboutComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'area-do-candidato', component: HomeComponent },
   { path: 'vagas', component: JobsComponent },
   { path: 'vaga/:id', component: JobDescriptionComponent },
+  { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent }
 ];
 

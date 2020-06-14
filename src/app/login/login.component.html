@@ -1,0 +1,36 @@
+<div class="welcome-login">
+  <div class="form-login">
+    <div class="content" *ngIf="!this.forgotPassword">
+      <h4>Você já faz parte do nosso banco de talentos?</h4>
+      <h2>Área do candidato</h2>
+      <div class="form">
+        <input type="text" name="txtLogin" id="txtLogin" class="input-style-classic" (input)="this.txtLogin = $event.target.value" [value]="this.txtLogin" placeholder="Digite seu e-mail">
+        <input type="password" name="txtPass" id="txtPass" class="input-style-classic" (input)="this.txtPass = $event.target.value" [value]="this.txtPass" placeholder="Digite a sua senha">
+        <label class="chkRemember">
+          <input type="checkbox" name="chkLembrar" (click)="this.handleRemember()" [checked]="this.remember" id="chkLembrar"> Lembrar-me
+        </label>
+        <button type="button" (click)="this.getCredential()" class="button-style-classic">Entrar</button>
+        <button (click)="this.forgotPassword = true" class="button-style-link small">Esqueci minha senha</button>
+      </div>
+      <hr>
+      <h4>Está buscando uma nova oportunidade?</h4>
+      <h2>Cadastre-se</h2>
+      <div class="form">
+        <input type="text" name="" id="" class="input-style-classic" placeholder="Digite seu e-mail">
+        <button type="button" class="button-style-classic">Continuar me cadastrando</button>
+      </div>
+    </div>
+    <div class="content" *ngIf="this.forgotPassword">
+      <h4>Esqueci a minha senha</h4>
+      <h2>Informe o seu e-mail</h2>
+      <div class="form">
+        <input type="text" name="" id="" class="input-style-classic" placeholder="ex: meuemail@gmail.com">
+        <button type="button" class="button-style-classic">Recuperar acesso</button>
+        <button type="button" (click)="this.forgotPassword = false" class="button-style-classic-outline small">Voltar</button>
+      </div>
+    </div>
+  </div>
+  <div class="image">
+    <img src="./../../assets/img-login.png" alt="" style="width: 100%">
+  </div>
+</div>

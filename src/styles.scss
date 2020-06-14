@@ -1,6 +1,28 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #fff; }
 
+$brand-color-1: #4f5865;
+$brand-color-2: #87a0b5;
+$brand-color-3: #aec7db;
+$brand-color-4: #cde6f6;
+
+$grey-color-4: #ececec;
+
+$break-small: 540px;
+$break-large: 1280px;
+
+@mixin mediaquery-to($media) {
+  @if $media == screen-sm {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == screen-md {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == screen-lg {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
 :focus {
   outline: none;
 }
@@ -11,6 +33,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 }
 .full-width {
   max-width: 100%;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .align-center {
@@ -29,9 +59,22 @@ img {
   max-width: 100%;
 }
 
-p {
-  font-size: 18px;
-  color: #7c7c7c;
+
+.title-with-subtitle {
+  width: 100%;
+  display: block;
+
+  h3 {
+    font-family: 'poppinslight';
+    padding: 10px 0 0 0;
+  }
+  h4 {
+    font-size: .9em;
+    font-family: 'tienneregular';
+    padding: 0;
+    margin: 0;
+    color: #777;
+  }
 }
 
 button:focus {
