@@ -1,0 +1,68 @@
+<div class="loading" fxLayout="row" fxLayoutAlign="center center" [hidden]="!loading">
+  <mat-spinner diameter="30" strokeWidth="2"></mat-spinner>
+</div>
+<div class="wrapper-content" fxLayout="row" fxLayoutAlign="start">
+  <app-menu-candidato></app-menu-candidato>  
+  <div class="dados">
+    <form [formGroup]="formCandidato" (ngSubmit)="onSubmit()" fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="space-between">
+      <input type="hidden" formControlName="id" readonly>
+      <input type="hidden" id="txt_position" formControlName="position" readonly>
+      <input type="hidden" id="txt_storeTypePreference" formControlName="storeTypePreference"  readonly>
+      <input type="hidden" id="txt_type" formControlName="type" readonly>
+      <div fxFlex="0 1 calc(100% - 32px)">
+        <mat-form-field class="form-group" fxFlex>
+          <input matInput placeholder="Nome Completo" formControlName="name">
+        </mat-form-field>
+      </div>
+      <div fxFlex="0 1 calc(25% - 32px)" fxFlex.xs="0 1 100%" fxFlex.sm="0 1 calc(50% - 32px)">
+        <mat-form-field class="form-group" fxFlex>
+          <input matInput placeholder="Celular" [textMask]="{mask: modelCelular, guide: false}" formControlName="cellPhone">
+        </mat-form-field>
+      </div>
+      <div fxFlex="0 1 calc(25% - 32px)" fxFlex.xs="0 1 100%" fxFlex.sm="0 1 calc(50% - 32px)">
+        <mat-form-field class="form-group" fxFlex>
+          <input matInput placeholder="Cidade" formControlName="city">
+        </mat-form-field>
+      </div>
+      <div fxFlex="0 1 calc(25% - 32px)" fxFlex.xs="0 1 100%" fxFlex.sm="0 1 calc(50% - 32px)">
+        <mat-form-field fxFlex>
+          <mat-label>Estado</mat-label>
+          <mat-select formControlName="state" [compareWith]="compareEstado">
+            <mat-option *ngFor="let estado of estados" [value]="estado.sigla">
+              {{estado.sigla}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div fxFlex="0 1 calc(25% - 32px)" fxFlex.xs="0 1 100%" fxFlex.sm="0 1 calc(50% - 32px)">
+        <mat-form-field class="form-group" fxFlex>
+          <input matInput placeholder="CPF" [textMask]="{mask: modelCPF, guide: false}" formControlName="cpf">
+        </mat-form-field>
+      </div>
+      <div fxFlex="0 1 calc(50% - 32px)" fxFlex.xs="0 1 100%" fxFlex.sm="0 1 100%">
+        <mat-form-field class="form-group" fxFlex>
+          <input matInput placeholder="E-mail" formControlName="email">
+        </mat-form-field>
+      </div>
+      <div fxFlex="0 1 calc(100% - 32px)">
+        <h3>Dados profissionais</h3>
+      </div>
+      <div fxFlex="0 1 calc(33.3% - 32px)">
+        <mat-form-field class="form-group" fxFlex>
+          <input matInput currencyMask [(ngModel)]="valorMinimoAceitavel" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" placeholder="Salário mínimo aceitável" formControlName="minSalary">
+        </mat-form-field>
+      </div>
+      <div fxFlex="0 1 calc(33.3% - 32px)">
+        <mat-form-field class="form-group" fxFlex>
+          <input matInput currencyMask [(ngModel)]="valorDesejavel" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" placeholder="Salário ideal" formControlName="idealSalary">
+        </mat-form-field>
+      </div>
+      <div fxFlex="0 1 calc(33.3% - 32px)">
+        <mat-form-field class="form-group" fxFlex>
+          <input matInput placeholder="Qual o segmento que está buscando?" formControlName="segment">
+        </mat-form-field>
+      </div>
+      <button mat-raised-button color="accent" type="submit">Atualizar meus dados</button>
+    </form>
+  </div>
+</div>

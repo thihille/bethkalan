@@ -5,12 +5,19 @@
         <a href="//facebook.com/equipesdelojas" class="social-link">
           <img src="../../assets/icons/facebook.svg" alt="">
         </a>
-        <a href="//linkedin.com/equipesdelojas" class="social-link">
-          <img src="../../assets/icons/linkedin.svg" alt="">
-        </a>
+        <!-- COLOCAR INSTAGRAM
+          <a href="//linkedin.com/equipesdelojas" class="social-link">
+            <img src="../../assets/icons/linkedin.svg" alt="">
+          </a>
+        -->
       </div>
       <p>
-        <span *ngIf="mydate">{{mydate}} | </span><span class="btn-login" [routerLink]="['/login']">Faça login</span>
+        <span *ngIf="mydate">
+          {{mydate}} | 
+        </span>
+        <span class="btn-login" [routerLink]="['/login']">
+          {{name ? name : 'Faça login'}}
+        </span>
       </p>
     </div>
   </div>
@@ -22,7 +29,7 @@
     </div>
     <div class="menu">
       <ul>
-        <li *ngFor="let item of items" [routerLink]="item.url">
+        <li *ngFor="let item of items" [routerLink]="item.url" routerLinkActive="actived">
             {{ item.label }}
         </li>
       </ul>

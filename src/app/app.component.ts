@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NotificationService } from './services/notification/notification.service';
 import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
-import { NotificationContainerComponent } from './notification/notification.component';
+import { NotificationContainerComponent } from './shared/components/notification/notification.component';
 import { Router, NavigationEnd } from '@angular/router';
 declare let ga: any;
 

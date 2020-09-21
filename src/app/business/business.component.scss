@@ -1,0 +1,33 @@
+@import "../../styles.scss";
+
+.bg-full-image {
+  width: 100%;
+  height: calc(100vh - 100px);
+  position: relative;
+  background: url('./../../assets/para-empresas.jpg') no-repeat center;
+  background-size: cover;
+}
+.content {
+  width: calc(100% - 40px);
+  padding: 0 20px;
+  background: white;
+  
+  h4 {
+    font-family: 'tienneregular';
+    color: $brand-color-2;
+    font-size: 1.5em;
+    padding: 50px 10px 0 0;
+    margin: 0;
+    text-align: right;
+  }
+  p {
+    font-family: 'poppinsregular';
+    font-size: .9em;
+
+    strong {
+      font-family: 'poppinsbold';
+    }
+  }
+
+  
+}

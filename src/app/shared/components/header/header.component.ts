@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as moment from 'moment';
+import { decodeToken } from '../../utils/token';
 import 'moment/min/locales';
 
 @Component({
@@ -12,11 +13,12 @@ export class HeaderComponent implements OnInit {
   @Input() showLogo;
 
   public mydate = null;
+  public name: string = null;
 
   public items = [
     {
       label: 'Quem somos',
-      url: '/sobre-nos',
+      url: '/quem-somos',
       privateRoute: false
     },
     {
@@ -31,20 +33,17 @@ export class HeaderComponent implements OnInit {
     },
     {
       label: 'Área do Candidato',
-      url: '/area-do-candidato',
+      url: '/dashboard',
       privateRoute: false
     }    
   ]
 
   constructor() {
     this.mydate = moment().locale('pt-br').format('LLLL');
+    this.name = decodeToken() ? decodeToken().name : null;
   }
 
   ngOnInit() {
-  }
-
-  goToBethKalan() {
-    window.open("http://bethkalan.com.br/", "_blank");
   }
 
 }

@@ -1,6 +1,6 @@
-<div class="welcome-login">
+<div class="welcome-login flex-row">
   <div class="form-login">
-    <div class="content" *ngIf="!this.forgotPassword">
+    <div class="content" [hidden]="!viewLogin">
       <h4>Você já faz parte do nosso banco de talentos?</h4>
       <h2>Área do candidato</h2>
       <div class="form">
@@ -10,27 +10,40 @@
           <input type="checkbox" name="chkLembrar" (click)="this.handleRemember()" [checked]="this.remember" id="chkLembrar"> Lembrar-me
         </label>
         <button type="button" (click)="this.getCredential()" class="button-style-classic">Entrar</button>
-        <button (click)="this.forgotPassword = true" class="button-style-link small">Esqueci minha senha</button>
+        <button (click)="handleViewForgotPassword()" class="button-style-link small">Esqueci minha senha</button>
       </div>
       <hr>
       <h4>Está buscando uma nova oportunidade?</h4>
       <h2>Cadastre-se</h2>
       <div class="form">
-        <input type="text" name="" id="" class="input-style-classic" placeholder="Digite seu e-mail">
-        <button type="button" class="button-style-classic">Continuar me cadastrando</button>
+        <input type="text" (input)="this.txtEmail = $event.target.value" [value]="this.txtEmail" class="input-style-classic" placeholder="Digite seu e-mail">
+        <button type="button" class="button-style-classic" (click)="this.getEmailRegister()">Continuar me cadastrando</button>
       </div>
     </div>
-    <div class="content" *ngIf="this.forgotPassword">
+    <div class="content" [hidden]="!viewContinueRegister">
+      <h2>Seja bem vindo!</h2>
+      <h4>Estamos quase lá, preencha os dados abaixo!</h4>
+      <div class="form">
+        <input type="text" name="txtEmail" id="txtEmail" class="input-style-classic" [value]="this.txtEmail" readonly disabled>
+        <input type="text" name="txtName" id="txtName" class="input-style-classic" (input)="this.txtName = $event.target.value" [value]="this.txtName" placeholder="Nome Completo">
+        <input type="text" name="txtCellphone" id="txtCellphone" class="input-style-classic" (input)="this.txtCellphone = $event.target.value" [value]="this.txtCellphone" placeholder="Celular com DDD">
+        <input type="text" name="txtCpf" id="txtCpf" class="input-style-classic" (input)="this.txtCpf = $event.target.value" [value]="this.txtCpf" placeholder="Digite seu CPF">
+        <span>Cadastre uma senha</span>
+        <input type="text" name="txtCpf" id="txtCpf" class="input-style-classic" (input)="this.txtCpf = $event.target.value" [value]="this.txtCpf" placeholder="Digite uma senha">
+        <input type="text" name="txtCpf" id="txtCpf" class="input-style-classic" (input)="this.txtCpf = $event.target.value" [value]="this.txtCpf" placeholder="Redigite a senha">
+        <button type="button" (click)="this.getCredential()" class="button-style-classic">Registrar</button>
+        <button (click)="handleViewLogin()" class="button-style-link small">Voltar para o login</button>
+      </div>
+    </div>
+    <div class="content" [hidden]="!viewForgotPassword">
       <h4>Esqueci a minha senha</h4>
-      <h2>Informe o seu e-mail</h2>
+      <h3>Informe o seu e-mail</h3>
       <div class="form">
         <input type="text" name="" id="" class="input-style-classic" placeholder="ex: meuemail@gmail.com">
         <button type="button" class="button-style-classic">Recuperar acesso</button>
-        <button type="button" (click)="this.forgotPassword = false" class="button-style-classic-outline small">Voltar</button>
+        <button type="button" (click)="handleViewForgotPassword()" class="button-style-classic-outline small">Voltar</button>
       </div>
     </div>
   </div>
-  <div class="image">
-    <img src="./../../assets/img-login.png" alt="" style="width: 100%">
-  </div>
+  <div class="bg-full-image"></div>
 </div>

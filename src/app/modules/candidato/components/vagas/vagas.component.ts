@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { JobService } from '../services/job/job.service';
+import { JobService } from '../../../../services/job/job.service';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-jobs',
-  templateUrl: './jobs.component.html',
-  styleUrls: ['./jobs.component.scss']
+  templateUrl: './vagas.component.html',
+  styleUrls: ['./vagas.component.scss']
 })
-export class JobsComponent implements OnInit {
+export class VagasComponent implements OnInit {
 
   jobs = [];
 

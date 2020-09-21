@@ -1,17 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
+import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { HomeComponent } from './home/home.component';
-import { JobDescriptionComponent } from './job-description/job-description.component';
-import { JobsComponent } from './jobs/jobs.component';
 import { LoginComponent } from './login/login.component';
+import { BusinessComponent } from './business/business.component';
 
 const routes: Routes = [
-  { path: 'sobre-nos', component: AboutComponent },
-  { path: 'para-empresas', component: HomeComponent },
-  { path: 'area-do-candidato', component: HomeComponent },
-  { path: 'vagas', component: JobsComponent },
-  { path: 'vaga/:id', component: JobDescriptionComponent },
+  { path: 'quem-somos', component: QuemSomosComponent },
+  { path: 'para-empresas', component: BusinessComponent },
   { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent }
 ];
